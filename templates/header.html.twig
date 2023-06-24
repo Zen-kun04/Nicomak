@@ -1,0 +1,32 @@
+<header>
+    <nav>
+        <ul>
+            <li>
+                <a href={{path("app_index")}}>Home</a>
+            </li>
+            <li>
+                <a href={{path("app_thanks")}}>Thanks List</a>
+            </li>
+            <li>
+                <a href={{path("app_thanks")}}>Employee List</a>
+            </li>
+        </ul>
+        <ul>
+            {% if app.user %}
+                <li>
+                    <a href={{path("app_thanks")}}>Thank an emloyee</a>
+                </li>
+                <li>
+                    <a href={{path("app_logout")}}>Logout</a>
+                </li>
+            {% else %}
+                <li>
+                    <a href={{path("app_login")}}>Login</a>
+                </li>
+                <li>
+                    <a href={{path("app_register")}}>Register</a>
+                </li>
+            {% endif %}    
+        </ul>
+    </nav>
+</header>

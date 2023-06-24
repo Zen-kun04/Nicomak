@@ -24,18 +24,20 @@ symfony serve
 ---
 - [x] Create project
 - [x] Create User/Employee entity
+- [x] Create Fixtures
 - [x] Create Thanks entity
 - [x] Create Index controller
 - [x] Create Thanks list controller
 - [x] Create Edition controller
-- [ ] Create Deletion controller
+- [x] Create Deletion controller
 - [x] Create login
 - [x] Create register
+- [x] Add header
 - [ ] Add styles
 - [ ] Make the web app responsive
 - [ ] Create thanks (be able to thank an employee)
 - [x] Add the edition functionnality
-- [ ] Add the deletion functionnality
+- [x] Add the deletion functionnality
 - [ ] Add avatars to Users/Employees
 - [ ] Add filters
 ---
