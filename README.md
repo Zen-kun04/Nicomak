@@ -1,7 +1,8 @@
-# Nicomak
+# **Nicomak**
 This project is for [Nicomak](https://www.nicomak.eu/) so that employees can thank each other.
 
-## How to setup
+## *How to setup*
+---
 1. First you will have to clone this project and go to the directory
 ```
 git clone https://github.com/Zen-kun04/Nicomak.git
@@ -18,3 +19,23 @@ nano .env
 ```
 symfony serve
 ```
+
+## *TODO List*
+---
+- [x] Create project
+- [x] Create User/Employee entity
+- [x] Create Thanks entity
+- [x] Create Index controller
+- [x] Create Thanks list controller
+- [x] Create Edition controller
+- [ ] Create Deletion controller
+- [x] Create login
+- [x] Create register
+- [ ] Add styles
+- [ ] Make the web app responsive
+- [ ] Create thanks (be able to thank an employee)
+- [x] Add the edition functionnality
+- [ ] Add the deletion functionnality
+- [ ] Add avatars to Users/Employees
+- [ ] Add filters
+---
