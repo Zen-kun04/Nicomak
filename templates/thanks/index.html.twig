@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nicomak - Thanks{% endblock %}
+
+{% block body %}
+    <div id="thanks">
+        {% for thank in thanks %}
+            {# <p>{{thank.reason}}</p> #}
+            <div class="thank">
+                <p class="from">{{thank.FromUser.email}}</p>
+                <p class="to">{{thank.ToUser.email}}</p>
+                <p class="message">{{thank.reason}}</p>
+                <p class="date">{{thank.ThankedAt|date("m/d/Y H:i:s")}}</p>
+                {% if app.user %}
+                    {% set isIdPresent = false %}
+                
+                    {% for userThanks in app.user.Thanks %}
+                        {% if userThanks.id == thank.Id %}
+                            {% set isIdPresent = true %}
+                        {% endif %}
+                    {% endfor %}
+                    {% if isIdPresent %}
+                        <a href={{path("app_edit", {'id' : thank.Id}) }}>Edit</a>
+                        <a href={{path("app_delete", {'id': thank.Id})}}>Delete</a>
+                    {% endif %}
+                {% endif %}
+                
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

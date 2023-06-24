@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello EditController!{% endblock %}
+
+{% block body %}
+{% if thanks %}
+    <h1>Exists</h1>
+    {{form(form)}}
+{% endif %}
+{% endblock %}
