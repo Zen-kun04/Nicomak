@@ -33,12 +33,11 @@ symfony serve
 - [x] Create login
 - [x] Create register
 - [x] Add header
-- [ ] Add styles
-- [ ] Make the web app responsive
+- [x] Add styles
+- [x] Make the web app responsive (it's not fully responsive)
 - [x] Create thanks (be able to thank an employee)
 - [x] Add the edition functionnality
 - [x] Add the deletion functionnality
-- [ ] Add avatars to Users/Employees
-- [ ] Add filters
-- [ ] List of my thanks (received and sent)
+- [x] Add avatars to Users/Employees
+- [x] Add filters
 ---

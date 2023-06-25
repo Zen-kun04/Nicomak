@@ -3,12 +3,33 @@
 {% block title %}Nicomak - Thanks{% endblock %}
 
 {% block body %}
+    {{ form(form) }}
     <div id="thanks">
         {% for thank in thanks %}
             {# <p>{{thank.reason}}</p> #}
             <div class="thank">
-                <p class="from">{{thank.FromUser.email}}</p>
-                <p class="to">{{thank.ToUser.email}}</p>
+                <p class="from">
+                    {% if thank.FromUser.profile is not null %}
+                        <img src="{{asset('images/' ~ thank.FromUser.profile)}}" alt="{{thank.FromUser.email|split('@')[0]}}'s profile picture from Nicomak.eu" draggable="false">
+                    {% else %}
+                    <img src="{{asset('images/user.png')}}" alt="Default user profile picture from Nicomak.eu">
+                    {% endif %}
+                    
+                    {{thank.FromUser.email}}
+                </p>
+
+                <p class="custom">
+                    has thanked
+                </p>
+
+                <p class="to">
+                    {% if thank.ToUser.profile is not null %}
+                        <img src="{{asset('images/' ~ thank.ToUser.profile)}}" alt="{{thank.ToUser.email|split('@')[0]}}'s profile picture from Nicomak.eu" draggable="false">
+                    {% else %}
+                    <img src="{{asset('images/user.png')}}" alt="Default user profile picture from Nicomak.eu" draggable="false">
+                    {% endif %}
+                    {{thank.ToUser.email}}
+                </p>
                 <p class="message">{{thank.reason}}</p>
                 <p class="date">{{thank.ThankedAt|date("m/d/Y H:i:s")}}</p>
                 {% if app.user %}

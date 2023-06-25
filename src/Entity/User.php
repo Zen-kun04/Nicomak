@@ -34,6 +34,9 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\OneToMany(mappedBy: 'From_User', targetEntity: Thanks::class, orphanRemoval: true)]
     private Collection $thanks;
 
+    #[ORM\Column(length: 30, nullable: true)]
+    private ?string $profile = null;
+
     public function __toString() {
         return $this->getEmail();
     }
@@ -139,6 +142,18 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
                 $thank->setFromUser(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getProfile(): ?string
+    {
+        return $this->profile;
+    }
+
+    public function setProfile(?string $profile): static
+    {
+        $this->profile = $profile;
 
         return $this;
     }

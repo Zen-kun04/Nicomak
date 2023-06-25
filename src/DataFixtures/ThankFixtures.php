@@ -13,11 +13,11 @@ class ThankFixtures extends AbstractFixture implements DependentFixtureInterface
 {
     public function load(ObjectManager $manager): void
     {
-        for ($i=1; $i < 10; $i++) { 
+        for ($i=0; $i < 7; $i++) { 
             
             $thanks = new Thanks();
             $thanks->setFromUser($this->getReference("employee_" . $i))
-            ->setToUser($this->getReference("employee_" . $this->faker->numberBetween(1, 9)))
+            ->setToUser($this->getReference("employee_" . $this->faker->numberBetween(0, 6)))
             ->setReason($this->faker->sentence())
             ->setThankedAt(new \DateTimeImmutable());
             $manager->persist($thanks);
