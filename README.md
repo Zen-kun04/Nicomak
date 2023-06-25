@@ -35,9 +35,10 @@ symfony serve
 - [x] Add header
 - [ ] Add styles
 - [ ] Make the web app responsive
-- [ ] Create thanks (be able to thank an employee)
+- [x] Create thanks (be able to thank an employee)
 - [x] Add the edition functionnality
 - [x] Add the deletion functionnality
 - [ ] Add avatars to Users/Employees
 - [ ] Add filters
+- [ ] List of my thanks (received and sent)
 ---
