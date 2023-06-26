@@ -33,6 +33,7 @@ class EditController extends AbstractController
             $thank->setToUser($to);
             $objectManager->persist($thank);
             $objectManager->flush();
+            return $this->redirectToRoute('app_thanks');
         }
 
         return $this->render('edit/index.html.twig', [

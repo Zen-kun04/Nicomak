@@ -2,7 +2,7 @@
 
 namespace App\Controller;
 
-use App\Repository\ThanksRepository;
+use App\Entity\Thanks;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
